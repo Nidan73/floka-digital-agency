@@ -30,7 +30,7 @@ const IntroSection = () => {
         initial={{ width: "0%" }}
         whileInView={{ width: `${percentage}%` }}
         viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }} // Premium ease
+        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         className={`flex items-center justify-between px-5 py-3 rounded-2xl whitespace-nowrap ${
           isBlack
             ? "bg-[#0a0a0a] text-white shadow-lg"
@@ -199,7 +199,6 @@ const IntroSection = () => {
         </div>
       </div>
       <div className="mt-24 lg:mt-32 w-full overflow-hidden">
-        {/* The maskImage creates the smooth fade-out effect on the left and right edges */}
         <div
           className="relative w-full"
           style={{
@@ -209,7 +208,6 @@ const IntroSection = () => {
               "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
           }}
         >
-          {/* autoFill={true} ensures the text loops perfectly no matter the screen size */}
           <Marquee speed={260} autoFill={true} className="overflow-hidden">
             <h2 className="font-funnel text-[60px] md:text-[100px] lg:text-[120px] font-medium tracking-tight text-black mx-6 lg:mx-10 whitespace-nowrap">
               See how our combines creativity, technology, and strategy

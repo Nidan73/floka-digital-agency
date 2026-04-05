@@ -4,10 +4,8 @@ import Marquee from "react-fast-marquee";
 
 const ExpertiseSection = () => {
   const [expertise, setExpertise] = useState([]);
-  // Default to the first item being open (id: 1)
   const [openId, setOpenId] = useState(1);
 
-  // Fetch data
   useEffect(() => {
     fetch("/data/expertise.json")
       .then((res) => res.json())
@@ -16,24 +14,19 @@ const ExpertiseSection = () => {
   }, []);
 
   const toggleOpen = (id) => {
-    // If clicking the already open one, close it. Otherwise, open the new one.
     setOpenId(openId === id ? null : id);
   };
 
   return (
-    // bg-black to match your design
     <section className="w-[98%] mx-auto bg-black py-24 lg:py-32 rounded-xl lg:rounded-xl mt-4">
       <div className="max-w-[95%] lg:max-w-[80%] mx-auto">
-        {/* HEADER */}
         <div className="text-center mb-16 lg:mb-24">
           <h2 className="font-funnel text-5xl md:text-7xl lg:text-[96px] font-bold tracking-tight leading-none">
             <span className="text-white block">Company</span>
-            {/* Dark gray text to match the image */}
             <span className="text-zinc-600 block">expertise</span>
           </h2>
         </div>
 
-        {/* ACCORDION LIST */}
         <div className="flex flex-col border-t border-zinc-800">
           {expertise.map((item) => {
             const isOpen = openId === item.id;
@@ -43,16 +36,10 @@ const ExpertiseSection = () => {
                 key={item.id}
                 className="border-b border-zinc-800 py-6 lg:py-8"
               >
-                {/* The 3-Column Grid Concept:
-                  Col 1: The Button
-                  Col 2 & 3: The Content Wrapper (which splits into Text and Image when open)
-                */}
                 <div className="grid grid-cols-12 gap-4 lg:gap-8 items-start">
-                  {/* --- COLUMN 1: Toggle Button --- */}
                   <div className="col-span-2 lg:col-span-1 flex justify-start">
                     <button
                       onClick={() => toggleOpen(item.id)}
-                      // The hover effect is strictly isolated to this button as requested
                       className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer ${
                         isOpen
                           ? "border-zinc-500 text-zinc-300"
@@ -66,7 +53,6 @@ const ExpertiseSection = () => {
                   </div>
 
                   <div className="col-span-10 lg:col-span-11">
-                    {/* Title (Always Visible) */}
                     <h3
                       onClick={() => toggleOpen(item.id)}
                       className={`text-2xl lg:text-3xl font-funnel font-medium cursor-pointer transition-colors duration-300 ${
@@ -76,7 +62,6 @@ const ExpertiseSection = () => {
                       {item.title}
                     </h3>
 
-                    {/* Expandable Area */}
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
@@ -89,9 +74,7 @@ const ExpertiseSection = () => {
                           }}
                           className="overflow-hidden"
                         >
-                          {/* Inner Grid: Splits Text (Left) and Image (Right) */}
                           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6 pb-4">
-                            {/* Inner Left: Description & Tags */}
                             <div className="flex flex-col gap-8 lg:pr-12 pt-2">
                               <p className="text-zinc-400 text-base lg:text-[17px] leading-relaxed">
                                 {item.description}
@@ -101,7 +84,6 @@ const ExpertiseSection = () => {
                                 {item.tags.map((tag, i) => (
                                   <span
                                     key={i}
-                                    // MATCHING 2ND IMAGE: Solid dark gray background, no border, thicker padding
                                     className="px-5 py-2.5 rounded-full text-[10px] font-bold tracking-widest uppercase text-white bg-[#1a1a1a]"
                                   >
                                     {tag}
@@ -110,7 +92,6 @@ const ExpertiseSection = () => {
                               </div>
                             </div>
 
-                            {/* Inner Right: Static Image */}
                             <div className="h-48 lg:h-64 w-full rounded-2xl overflow-hidden bg-zinc-900">
                               <img
                                 src={item.image}
@@ -130,26 +111,21 @@ const ExpertiseSection = () => {
         </div>
 
         <div className="mt-8 border-b border-zinc-800 pb-12">
-          {/* Upgrade to motion.button to trigger Framer Motion variants on hover */}
           <motion.button
             initial="initial"
             whileHover="hovered"
             className="group flex items-center gap-4 cursor-pointer w-fit"
           >
-            {/* The + Button (Retains your Tailwind hover rotation) */}
             <div className="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-90">
               <span className="text-xl leading-none mb-0.5">+</span>
             </div>
 
-            {/* The Animated Text Container */}
             <div className="flex overflow-hidden text-[11px] font-bold text-white uppercase tracking-widest">
               {"Hire us today".split("").map((char, index) => (
-                // whitespace-pre is crucial here so the space characters don't collapse
                 <span
                   key={index}
                   className="relative inline-block whitespace-pre"
                 >
-                  {/* Default Character (slides DOWN out of view on hover) */}
                   <motion.span
                     variants={{
                       initial: { y: 0 },
@@ -165,7 +141,6 @@ const ExpertiseSection = () => {
                     {char}
                   </motion.span>
 
-                  {/* Hover Character (slides IN from the TOP on hover) */}
                   <motion.span
                     variants={{
                       initial: { y: "-100%" },
@@ -206,12 +181,10 @@ const ExpertiseSection = () => {
                 text: '"Great in UI/UX"',
               },
             ].map((testimonial, i) => (
-              // Added mx-8 (margin-x) to create space between the items as they scroll
               <div key={i} className="flex items-center gap-3 mx-8 lg:mx-12">
                 <img
                   src={testimonial.img}
                   alt="User"
-                  // Removed 'grayscale' and 'opacity-80' to restore full, normal colors
                   className="w-10 h-10 rounded-full object-cover"
                 />
                 <p className="text-zinc-400 text-sm md:text-base font-medium">

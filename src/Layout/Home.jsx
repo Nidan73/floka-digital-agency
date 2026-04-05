@@ -7,6 +7,7 @@ import IntroSection from "../Section/IntroSection";
 import PortfolioSection from "../Section/PortfolioSection";
 import ExpertiseSection from "../Section/ExpertiseSection";
 import FunFactsSection from "../Section/FunFactsSection";
+import ClientLogosSection from "../Section/ClientLogosSection";
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const Home = () => {
 
         <section className="sticky z-60 w-full bg-white shadow-[0_-30px_60px_rgba(0,0,0,0.2)] rounded-t-[3rem]">
           <FunFactsSection />
+          <ClientLogosSection />
         </section>
       </main>
 
