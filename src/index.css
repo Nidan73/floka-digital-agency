@@ -6,7 +6,11 @@
 @plugin "daisyui" {
   themes: light;
 }
-
+html,
+body {
+  overflow-x: clip !important;
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
