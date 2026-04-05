@@ -3,9 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
 import logo from "../../assets/Logo.png";
 import modal_image from "../../assets/modal_image.jpg";
-import modal_bottom from "../../assets/modal_bottom.svg";
 import "./Navbar.css";
-
+import SpinningBadge from "./SpinningBadge";
+import modal_bottom from "../../assets/modal_bottom.svg";
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // For Desktop dark modal
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // For Mobile white drawer
@@ -215,36 +215,10 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-end mt-12 pb-8 shrink-0">
-              <div className="relative w-32 h-32 flex items-center justify-center">
-                <svg
-                  className="absolute inset-0 w-full h-full animate-[spin_15s_linear_infinite] text-zinc-500"
-                  viewBox="0 0 100 100"
-                >
-                  <defs>
-                    <path
-                      id="textCircle"
-                      d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
-                    />
-                  </defs>
-                  <text
-                    className="text-[9.5px] font-funnel uppercase tracking-[0.2em]"
-                    fill="currentColor"
-                  >
-                    <textPath href="#textCircle" startOffset="0%">
-                      WANT IT TO SOUND PLAYFUL, LUXURIOUS, OR MORE/
-                    </textPath>
-                  </text>
-                </svg>
-                <span className="relative z-10 flex items-center justify-center bg-black rounded-full p-2">
-                  <img
-                    className="h-10 w-10 object-contain"
-                    src={modal_bottom}
-                    alt="Floka Brand"
-                  />
-                </span>
-              </div>
-            </div>
+            <SpinningBadge
+              imageSrc={modal_bottom}
+              className="flex justify-center lg:justify-end mt-12 pb-8"
+            ></SpinningBadge>
           </motion.div>
         )}
       </AnimatePresence>
