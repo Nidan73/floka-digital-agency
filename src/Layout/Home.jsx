@@ -4,6 +4,7 @@ import Hero from "../Section/Hero";
 import BlurOverlay from "../components/Common/BlurOverlay";
 import CustomCursor from "../components/Common/CustomCursor";
 import IntroSection from "../Section/IntroSection";
+import PortfolioSection from "../Section/PortfolioSection";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <main>
           <Hero></Hero>
           <IntroSection></IntroSection>
+          <PortfolioSection></PortfolioSection>
         </main>
       </section>
       <BlurOverlay />

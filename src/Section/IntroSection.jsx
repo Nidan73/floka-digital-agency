@@ -6,11 +6,9 @@ import modal_bottom from "../assets/modal_bottom.svg";
 import woman from "../assets/woman.png";
 import ultra from "../assets/ultra.png";
 import hyperBest from "../assets/hyperBest.png";
-// Import your images here
-// import ceo_img from "../assets/ceo_image.png";
+import Marquee from "react-fast-marquee";
 
 const IntroSection = () => {
-  // Animation variants for the staggered text fade-in
   const textVariants = {
     hidden: { opacity: 0, x: 60 },
     visible: {
@@ -26,7 +24,6 @@ const IntroSection = () => {
     },
   };
 
-  // Helper component for the animated Progress Pills
   const ProgressPill = ({ label, percentage, isBlack }) => (
     <div className="w-full rounded-2xl overflow-hidden bg-transparent">
       <motion.div
@@ -86,12 +83,7 @@ const IntroSection = () => {
           </h2>
         </motion.div>
       </div>
-
-      {/* =========================================
-          NEW SECTION: The Stats, CEO, & Progress Grid
-      ========================================= */}
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 mt-16 lg:mt-24">
-        {/* --- LEFT DIV: Stats (Mobile: Order 1) --- */}
         <div className="order-1 lg:order-none lg:col-span-3 bg-zinc-50 rounded-[2rem] p-8 flex flex-col justify-between min-h-[400px]">
           <div>
             <h3 className="text-7xl lg:text-[80px] font-bold tracking-tighter text-black leading-none">
@@ -110,7 +102,6 @@ const IntroSection = () => {
           </div>
 
           <div className="mt-8">
-            {/* Avatar Group */}
             <div className="flex -space-x-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-zinc-300 border-2 border-white object-cover overflow-hidden">
                 <img src="https://i.pravatar.cc/100?img=1" alt="user" />
@@ -134,9 +125,7 @@ const IntroSection = () => {
           </div>
         </div>
 
-        {/* --- MIDDLE DIV: CEO Image & Quote (Mobile: Order 3) --- */}
         <div className="order-3 lg:order-none lg:col-span-6 bg-[#0a0a0a] rounded-[2rem] p-8 lg:p-12 relative overflow-hidden flex flex-col justify-between min-h-[450px] lg:min-h-[500px]">
-          {/* Top Right Badges (Images instead of text) */}
           <div className="absolute top-8 right-8 flex flex-col gap-4 text-right z-20">
             <img
               src={ultra}
@@ -150,20 +139,16 @@ const IntroSection = () => {
             />
           </div>
 
-          {/* CEO Image Animation Fixed */}
           <motion.img
             src={woman}
             alt="CEO"
-            // We use x: "-50%" here so Framer Motion doesn't break the CSS horizontal centering
             initial={{ y: -60, x: "-50%", opacity: 0.5 }}
             whileInView={{ y: 0, x: "-50%", opacity: 1 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            // Changed from bottom-0 to top-0 to anchor at the start of the div
             className="absolute top-0 left-1/2 md:left-1/3 w-full max-w-[400px] lg:max-w-[450px] origin-top z-15"
           />
 
-          {/* Bottom Quote Layer (Z-20 keeps it above the image) */}
           <div className="relative z-20 mt-auto pt-40">
             <p className="text-white text-xl lg:text-3xl font-funnel font-medium leading-snug ">
               "At Floka, we merge strategy, creativity, and technology to shape
@@ -175,9 +160,7 @@ const IntroSection = () => {
           </div>
         </div>
 
-        {/* --- RIGHT DIV: Social & Impressions (Mobile: Order 2) --- */}
         <div className="order-2 lg:order-none lg:col-span-3 flex flex-col gap-6">
-          {/* Top Right: Social Box */}
           <div className="bg-zinc-50 rounded-[2rem] p-8">
             <p className="text-zinc-400 font-medium text-sm">Follow us</p>
             <h4 className="text-2xl font-bold text-black mt-1 mb-8 tracking-tight">
@@ -198,7 +181,6 @@ const IntroSection = () => {
             </div>
           </div>
 
-          {/* Bottom Right: Impressions Box */}
           <div className="bg-zinc-50 rounded-[2rem] p-8 flex-grow flex flex-col">
             <p className="text-zinc-400 font-medium text-sm mb-6">
               Impressions
@@ -214,6 +196,25 @@ const IntroSection = () => {
               <ProgressPill label="Explore" percentage={72} isBlack={false} />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-24 lg:mt-32 w-full overflow-hidden">
+        {/* The maskImage creates the smooth fade-out effect on the left and right edges */}
+        <div
+          className="relative w-full"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+          }}
+        >
+          {/* autoFill={true} ensures the text loops perfectly no matter the screen size */}
+          <Marquee speed={260} autoFill={true} className="overflow-hidden">
+            <h2 className="font-funnel text-[60px] md:text-[100px] lg:text-[120px] font-medium tracking-tight text-black mx-6 lg:mx-10 whitespace-nowrap">
+              See how our combines creativity, technology, and strategy
+            </h2>
+          </Marquee>
         </div>
       </div>
     </section>
