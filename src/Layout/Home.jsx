@@ -9,6 +9,9 @@ import ExpertiseSection from "../Section/ExpertiseSection";
 import FunFactsSection from "../Section/FunFactsSection";
 import ClientLogosSection from "../Section/ClientLogosSection";
 import UserFeedbackSection from "../Section/UserFeedbackSection";
+import ContactSection from "../Section/ContactSection";
+import AwardsSection from "../Section/AwardsSection";
+import AvengersSection from "../Section/AvengersSection";
 
 const Home = () => {
   return (
@@ -34,10 +37,12 @@ const Home = () => {
           <FunFactsSection />
           <ClientLogosSection />
           <UserFeedbackSection />
+          <ContactSection />
+          <AwardsSection />
+          <AvengersSection></AvengersSection>
         </section>
+        <BlurOverlay />
       </main>
-
-      <BlurOverlay />
     </div>
   );
 };

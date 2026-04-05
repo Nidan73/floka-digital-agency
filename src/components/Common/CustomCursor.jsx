@@ -45,9 +45,6 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      /* PREMIUM TIP: 'hidden lg:flex' ensures the cursor is completely 
-        removed on mobile/tablet and only renders on Desktop screens.
-      */
       className="fixed top-0 left-0 z-[9999] pointer-events-none hidden lg:flex items-center justify-center rounded-full"
       style={{
         x: smoothX,
@@ -56,7 +53,6 @@ const CustomCursor = () => {
         translateY: "-50%",
         width: isHovering ? 60 : 40,
         height: isHovering ? 60 : 40,
-        // Current light/transparent color strategy
         backgroundColor: isHovering ? "rgba(0, 0, 0, 0.05)" : "transparent",
         border: "1px solid rgba(0, 0, 0, 0.1)",
         transition: { type: "spring", ...springConfig },
@@ -64,7 +60,6 @@ const CustomCursor = () => {
     >
       <AnimatePresence mode="wait">
         {!isHovering ? (
-          /* 1. THE BLACK DOT: Visible only when NOT hovering */
           <motion.div
             key="dot"
             initial={{ scale: 0, opacity: 0 }}
@@ -73,7 +68,6 @@ const CustomCursor = () => {
             className="w-1.5 h-1.5 bg-black rounded-full"
           />
         ) : (
-          /* 2. THE TEXT: Fades in only when hovering */
           <motion.span
             key="text"
             initial={{ opacity: 0, y: 10 }}
