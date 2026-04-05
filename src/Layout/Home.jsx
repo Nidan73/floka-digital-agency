@@ -13,6 +13,9 @@ import ContactSection from "../Section/ContactSection";
 import AwardsSection from "../Section/AwardsSection";
 import AvengersSection from "../Section/AvengersSection";
 import FaqSection from "../Section/FaqSection";
+import InsightsSection from "../Section/InsightsSection";
+import Footer from "../components/Common/Footer";
+import ParticleHero from "../components/Common/ParticleLogo";
 
 const Home = () => {
   return (
@@ -42,9 +45,12 @@ const Home = () => {
           <AwardsSection />
           <AvengersSection />
           <FaqSection />
+          <InsightsSection />
         </section>
         <BlurOverlay />
       </main>
+      <ParticleHero></ParticleHero>
+      <Footer />
     </div>
   );
 };
