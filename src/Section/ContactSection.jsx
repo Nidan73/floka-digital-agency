@@ -42,7 +42,6 @@ const fieldCreate = {
 const ContactSection = () => {
   return (
     <section className="relative overflow-hidden rounded-[2rem] bg-black text-white">
-      {/* background texture */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -57,7 +56,6 @@ const ContactSection = () => {
 
       <div className="relative max-w-[95%] lg:max-w-[90%] mx-auto py-16 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* LEFT */}
           <div className="pt-2 lg:pt-4">
             <motion.span
               {...fadeUpSmall}
@@ -105,7 +103,6 @@ const ContactSection = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT */}
           <div className="w-full max-w-[610px] lg:ml-auto rounded-[2rem] bg-[#f3f3f3] text-black p-6 sm:p-8 lg:p-12 shadow-2xl">
             <motion.h3
               {...fadeUpSmall}

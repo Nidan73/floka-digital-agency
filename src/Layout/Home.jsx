@@ -12,6 +12,7 @@ import UserFeedbackSection from "../Section/UserFeedbackSection";
 import ContactSection from "../Section/ContactSection";
 import AwardsSection from "../Section/AwardsSection";
 import AvengersSection from "../Section/AvengersSection";
+import FaqSection from "../Section/FaqSection";
 
 const Home = () => {
   return (
@@ -39,7 +40,8 @@ const Home = () => {
           <UserFeedbackSection />
           <ContactSection />
           <AwardsSection />
-          <AvengersSection></AvengersSection>
+          <AvengersSection />
+          <FaqSection />
         </section>
         <BlurOverlay />
       </main>
