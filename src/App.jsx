@@ -1,9 +1,13 @@
+import Navbar from "../src/components/Common/Navbar";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <div className="">
+        <Navbar />
+        <h1>Vite + React</h1>
+      </div>
     </>
   );
 }
