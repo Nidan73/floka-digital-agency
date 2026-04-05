@@ -16,9 +16,3 @@ body {
 .font-funnel {
   font-family: "Funnel Display", sans-serif;
 }
-
-/* Ensure links still look like they are clickable to the browser */
-a,
-button {
-  cursor: none;
-}

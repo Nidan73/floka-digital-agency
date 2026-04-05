@@ -10,12 +10,11 @@ const CustomCursor = () => {
   const [cursorText, setCursorText] = useState("");
   const [isHovering, setIsHovering] = useState(false);
 
-  // 1. Mouse Position Tracking
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // 2. Premium Spring Physics (High damping for a smooth, heavy feel)
-  const springConfig = { damping: 28, stiffness: 150 };
+  // Soft spring for that heavy, premium agency feel
+  const springConfig = { damping: 15, stiffness: 120 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
@@ -46,25 +45,26 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full"
+      /* PREMIUM TIP: 'hidden lg:flex' ensures the cursor is completely 
+        removed on mobile/tablet and only renders on Desktop screens.
+      */
+      className="fixed top-0 left-0 z-[9999] pointer-events-none hidden lg:flex items-center justify-center rounded-full"
       style={{
         x: smoothX,
         y: smoothY,
         translateX: "-50%",
         translateY: "-50%",
-      }}
-      animate={{
-        // Cursor grows significantly on hover
         width: isHovering ? 60 : 40,
         height: isHovering ? 60 : 40,
-        // Transparent light color as requested
-        backgroundColor: isHovering ? "rgba(0, 0, 0, 0.08)" : "transparent",
-        border: "1px solid rgba(0, 0, 0, 0.15)",
+        // Current light/transparent color strategy
+        backgroundColor: isHovering ? "rgba(0, 0, 0, 0.05)" : "transparent",
+        border: "1px solid rgba(0, 0, 0, 0.1)",
+        transition: { type: "spring", ...springConfig },
       }}
     >
       <AnimatePresence mode="wait">
         {!isHovering ? (
-          /* THE BLACK DOT (Disappears on hover) */
+          /* 1. THE BLACK DOT: Visible only when NOT hovering */
           <motion.div
             key="dot"
             initial={{ scale: 0, opacity: 0 }}
@@ -73,13 +73,13 @@ const CustomCursor = () => {
             className="w-1.5 h-1.5 bg-black rounded-full"
           />
         ) : (
-          /* THE HOVER TEXT (Appears when dot is gone) */
+          /* 2. THE TEXT: Fades in only when hovering */
           <motion.span
             key="text"
-            initial={{ opacity: 0, y: 5 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            className="text-black font-medium text-sm uppercase tracking-wider"
+            exit={{ opacity: 0, y: -10 }}
+            className="text-black font-funnel text-sm font-medium tracking-tight"
           >
             {cursorText}
           </motion.span>

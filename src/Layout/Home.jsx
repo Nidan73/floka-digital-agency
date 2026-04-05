@@ -3,6 +3,7 @@ import Navbar from "../components/Common/Navbar";
 import Hero from "../Section/Hero";
 import BlurOverlay from "../components/Common/BlurOverlay";
 import CustomCursor from "../components/Common/CustomCursor";
+import IntroSection from "../Section/IntroSection";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         </header>
         <main>
           <Hero></Hero>
+          <IntroSection></IntroSection>
         </main>
       </section>
       <BlurOverlay />

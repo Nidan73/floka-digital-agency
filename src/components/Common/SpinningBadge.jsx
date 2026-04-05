@@ -6,11 +6,8 @@ const SpinningBadge = ({
   className = "",
 }) => {
   return (
-    // The wrapper div accepts a className prop so you can easily change
-    // the alignment (like justify-end vs justify-center) wherever you use it.
     <div className={`shrink-0 ${className}`}>
       <div className="relative w-32 h-32 flex items-center justify-center">
-        {/* The Rotating SVG Text */}
         <svg
           className="absolute inset-0 w-full h-full animate-[spin_15s_linear_infinite] text-zinc-500"
           viewBox="0 0 100 100"
@@ -30,8 +27,6 @@ const SpinningBadge = ({
             </textPath>
           </text>
         </svg>
-
-        {/* The Center Image */}
         <span className="relative z-10 flex items-center justify-center bg-black rounded-full p-2">
           {imageSrc && (
             <img
