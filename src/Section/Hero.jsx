@@ -5,7 +5,7 @@ import ParallaxImage from "../components/Common/ParallaxImage";
 
 const Hero = () => {
   return (
-    <section className="relative max-w-[95%] lg:max-w-[98%] mx-auto min-h-[85vh] lg:h-[95vh] rounded-[2rem] overflow-hidden mt-4 lg:mt-6">
+    <section className="relative max-w-[95%] lg:max-w-[98%] mx-auto min-h-[100vh] lg:h-[95vh] rounded-[2rem] overflow-hidden mt-4 lg:mt-6">
       <video
         src={hero_video}
         autoPlay
@@ -16,7 +16,7 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/20" />
 
-      <div className="relative z-10 w-full h-full p-6 sm:p-8 lg:p-16 flex flex-col lg:flex-row justify-between items-start lg:items-end pb-10 lg:pb-24 gap-12">
+      <div className="relative z-10 w-full h-full p-6 sm:p-8 lg:p-16 flex flex-col lg:flex-row justify-between items-start lg:items-end pb-5 lg:pb-24 gap-12">
         <h1 className="flex flex-col font-funnel pointer-events-none">
           <span className="text-[88px] mt-8 min-[390px]:text-[100px] md:text-[180px] lg:text-[220px] font-bold text-white leading-none tracking-tight">
             Floka
@@ -45,7 +45,10 @@ const Hero = () => {
               </div>
 
               <button className="group flex items-center justify-start gap-4 mt-6 sm:mt-auto cursor-pointer">
-                <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:group-hover:rotate-90">
+                <div
+                  data-cursor=""
+                  className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:group-hover:rotate-90"
+                >
                   <span className="text-lg leading-none mb-0.5">+</span>
                 </div>
 

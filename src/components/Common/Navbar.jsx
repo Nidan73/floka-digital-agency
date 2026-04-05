@@ -58,7 +58,12 @@ const Navbar = () => {
               </button>
             </div>
             <a href="#home" className="flex items-center lg:ml-0 ml-2">
-              <img src={logo} alt="Floka Logo" className="max-h-8 w-auto" />
+              <img
+                data-cursor={""}
+                src={logo}
+                alt="Floka Logo"
+                className="max-h-8 w-auto"
+              />
             </a>
           </div>
 
@@ -66,7 +71,9 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1 font-medium text-lg">
               {links.map((item) => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase()}`}>{item}</a>
+                  <a data-cursor={""} href={`#${item.toLowerCase()}`}>
+                    {item}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -74,6 +81,7 @@ const Navbar = () => {
 
           <div className="navbar-end gap-4">
             <a
+              data-cursor={""}
               href="mailto:info@floka.com"
               className="hidden sm:block text-lg font-light hover:text-primary transition-colors"
             >
@@ -83,7 +91,7 @@ const Navbar = () => {
               onClick={() => setIsModalOpen(true)}
               className="hover:opacity-70 transition-opacity p-2 cursor-pointer hidden lg:block"
             >
-              <div className="grid grid-cols-3 gap-1.5 w-6">
+              <div data-cursor={""} className="grid grid-cols-3 gap-1.5 w-6">
                 <div className="w-1.5 h-1.5 bg-current rounded-full col-start-2"></div>
                 <div className="w-1.5 h-1.5 bg-current rounded-full col-start-1"></div>
                 <div className="w-1.5 h-1.5 bg-current rounded-full"></div>
