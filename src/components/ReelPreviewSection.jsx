@@ -153,7 +153,7 @@ const ReelPreviewSection = () => {
       <YoutubeModal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        youtubeId="SF4aHwxHtZ0&t"
+        youtubeId="SF4aHwxHtZ0"
       />
     </>
   );
