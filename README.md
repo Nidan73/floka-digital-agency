@@ -1,19 +1,22 @@
 # 🌌 Floka Digital Agency
 
-A high-performance, visually immersive digital agency landing page. This project combines cutting-edge frontend architecture with premium motion design and 3D particle simulations to create a "luxury" digital experience.
+A high-performance, visually immersive digital agency landing page. This project combines modern frontend architecture with premium motion design and 3D particle simulations to create a luxury digital experience.
 
 🔗 **Live Demo:** [sm-tech-task.netlify.app](https://sm-tech-task.netlify.app/)
+
+🔗 **GitHub Repository:** [Nidan73/floka-digital-agency](https://github.com/Nidan73/floka-digital-agency)
 
 ---
 
 ## ✨ Key Features
 
-- **Premium UI/UX:** A minimalist, "dark-mode" aesthetic inspired by top-tier creative agencies.
-- **3D Particle Logo:** Custom-built interactive particle system using **React Three Fiber** and **Three.js** that reacts to mouse movement.
-- **Typographic Preloader:** Seamless black-screen entry with a high-precision progress "scan" line.
-- **Dynamic Scroll Interactions:** Smooth "Scroll-to-Top" indicator with a SVG-based circular progress tracker.
-- **Modern Layouts:** Includes a masonry-style blog/insights section, expertise showcases, and an interactive portfolio.
-- **Fully Responsive:** Fluid design that scales from mobile devices to ultra-wide monitors.
+- **Premium UI/UX:** A minimalist dark aesthetic inspired by top-tier creative agencies.
+- **3D Particle Logo:** Custom interactive particle system built with **React Three Fiber** and **Three.js**.
+- **Typographic Preloader:** Smooth black-screen entry with a precise progress scan-line effect.
+- **Dynamic Scroll Interactions:** SVG-based circular progress tracker for scroll-to-top interaction.
+- **Modern Layouts:** Includes portfolio, expertise, awards, testimonials, contact, and blog-style insight sections.
+- **Smooth Animations:** Rich transitions and motion effects powered by **Framer Motion**.
+- **Fully Responsive:** Optimized for mobile, tablet, laptop, and large displays.
 
 ---
 
@@ -21,21 +24,30 @@ A high-performance, visually immersive digital agency landing page. This project
 
 ### Core
 
-- **React 19:** Utilizing the latest concurrent rendering features.
-- **Vite:** Next-generation frontend tooling for near-instant HMR.
-- **React Router:** Sophisticated client-side routing.
+- **React 19**
+- **Vite**
+- **React Router**
 
 ### Styling & Animation
 
-- **Tailwind CSS v4:** Leveraging the newest CSS-variable-based engine.
-- **Framer Motion:** High-end declarative animations and exit transitions.
-- **DaisyUI:** Accessible component building blocks.
+- **Tailwind CSS v4**
+- **DaisyUI**
+- **Framer Motion**
 
 ### 3D & Creative Coding
 
-- **Three.js / React Three Fiber:** GPU-accelerated 3D rendering.
-- **@react-three/drei:** Specialized helpers for 3D particle physics and buffer geometry.
-- **Lucide React & React Icons:** Clean, consistent iconography.
+- **Three.js**
+- **React Three Fiber**
+- **@react-three/drei**
+- **Lucide React**
+- **React Icons**
+
+### Additional Libraries
+
+- **React CountUp**
+- **React Fast Marquee**
+- **clsx**
+- **tailwind-merge**
 
 ---
 
@@ -43,52 +55,108 @@ A high-performance, visually immersive digital agency landing page. This project
 
 ```bash
 floka-digital-agency/
-├── public/                # Static assets (favicons, etc.)
+├── public/                # Static assets and Netlify redirects
 ├── src/
-│   ├── assets/            # Project images and SVG logos
+│   ├── assets/            # Images, SVGs, and visual resources
 │   ├── components/
-│   │   └── Common/        # Reusable UI (Preloader, ScrollToTop, etc.)
-│   ├── Layout/            # Main wrapper components
-│   ├── route/             # React Router configuration
-│   ├── Section/           # Specific page sections (Hero, Portfolio, etc.)
-│   ├── lib/               # Utility functions (shadcn/tailwind merges)
-│   ├── App.jsx            # Core logic wrapper
-│   └── main.jsx           # Entry point & Preloader logic
-└── vite.config.js         # Build configurations
+│   │   └── Common/        # Reusable UI components
+│   ├── Layout/            # Layout wrappers
+│   ├── lib/               # Utility helpers
+│   ├── route/             # Routing configuration
+│   ├── Section/           # Page sections
+│   │   ├── AvengersSection.jsx
+│   │   ├── AwardsSection.jsx
+│   │   ├── ClientLogosSection.jsx
+│   │   ├── ContactSection.jsx
+│   │   ├── ExpertiseSection.jsx
+│   │   ├── FaqSection.jsx
+│   │   ├── FunFactsSection.jsx
+│   │   ├── Hero.jsx
+│   │   ├── InsightsSection.jsx
+│   │   ├── IntroSection.jsx
+│   │   ├── PortfolioSection.jsx
+│   │   └── UserFeedbackSection.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+└── vite.config.js
 ```
-
-````
-
----
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Nidan73/floka-digital-agency.git](https://github.com/Nidan73/floka-digital-agency.git)
-Navigate to the project directory:
+### 1. Clone the repository
 
-Bash
+```bash
+git clone https://github.com/Nidan73/floka-digital-agency.git
 cd floka-digital-agency
-Install dependencies:
+```
 
-Bash
+### 2. Install dependencies
+
+```bash
 npm install
-Start the development server:
+```
 
-Bash
+### 3. Start the development server
+
+```bash
 npm run dev
+```
 
-👤 Author
-Nidan Alam
+### 4. Build for production
 
-GitHub: @Nidan73
+```bash
+npm run build
+```
 
-LinkedIn/Portfolio: https://nidanalam.netlify.app/
+### 5. Preview the production build
 
+```bash
+npm run preview
+```
 
-📄 License
-This project is for demonstration purposes. All rights reserved.
-````
+---
+
+## 📦 Scripts
+
+- `npm run dev` — Start the Vite development server
+- `npm run build` — Create the production build
+- `npm run preview` — Preview the production build locally
+- `npm run lint` — Run ESLint
+
+---
+
+## 🌐 Deployment
+
+This project is deployed on **Netlify**.
+
+For SPA routing on Netlify, add a `_redirects` file inside the `public/` folder with the following rule:
+
+```txt
+/*    /index.html   200
+```
+
+---
+
+## 👤 Author
+
+**Nidan Alam**
+
+- **Portfolio:** [nidanalam.netlify.app](https://nidanalam.netlify.app/)
+- **LinkedIn:** [linkedin.com/in/nidan-alam-7428a3231](https://www.linkedin.com/in/nidan-alam-7428a3231)
+- **GitHub:** [github.com/Nidan73](https://github.com/Nidan73)
+
+---
+
+## 📄 License
+
+This project is for demonstration and portfolio purposes. All rights reserved.
