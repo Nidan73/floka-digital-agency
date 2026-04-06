@@ -1,12 +1,4 @@
----
-
-````markdown
 # 🌌 Floka Digital Agency
-
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-06B6D4?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
-[![Three.js](https://img.shields.io/badge/Three.js-WebGL-black?style=flat&logo=three.js)](https://threejs.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
 
 A high-performance, visually immersive digital agency landing page. This project combines cutting-edge frontend architecture with premium motion design and 3D particle simulations to create a "luxury" digital experience.
 
