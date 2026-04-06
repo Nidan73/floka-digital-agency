@@ -61,47 +61,34 @@ floka-digital-agency/
 
 ---
 
+---
+
 ## 🚀 Getting Started
 
-1.  **Clone the repository:**
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Nidan73/floka-digital-agency.git](https://github.com/Nidan73/floka-digital-agency.git)
+Navigate to the project directory:
 
-    ```bash
-    git clone [https://github.com/Nidan73/floka-digital-agency.git](https://github.com/Nidan73/floka-digital-agency.git)
-    ```
+Bash
+cd floka-digital-agency
+Install dependencies:
 
-2.  **Navigate to the project directory:**
+Bash
+npm install
+Start the development server:
 
-    ```bash
-    cd floka-digital-agency
-    ```
+Bash
+npm run dev
 
-3.  **Install dependencies:**
+👤 Author
+Nidan Alam
 
-    ```bash
-    npm install
-    ```
+GitHub: @Nidan73
 
-4.  **Start the development server:**
-
-    ```bash
-    npm run dev
-    ```
+LinkedIn/Portfolio: https://nidanalam.netlify.app/
 
 
----
-
-## 👤 Author
-
-**Nidan Alam**
-
-- **GitHub:** [@Nidan73](https://github.com/Nidan73)
-- **LinkedIn:** [https://nidanalam.netlify.app/]
-
----
-
-## 📄 License
-
+📄 License
 This project is for demonstration purposes. All rights reserved.
-
-```
 ````
