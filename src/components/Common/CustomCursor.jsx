@@ -13,7 +13,6 @@ const CustomCursor = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // Soft spring for that heavy, premium agency feel
   const springConfig = { damping: 15, stiffness: 120 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);

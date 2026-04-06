@@ -59,7 +59,6 @@ const Footer = () => {
         </div>
 
         <div className="relative w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 z-10">
-          {/* Left image block */}
           <div className="lg:col-span-4 relative z-10">
             <div className="relative w-full pb-28 lg:pb-36">
               <div className="absolute left-0 bottom-0 w-[100%] pointer-events-none select-none z-0 opacity-[100]">
@@ -70,7 +69,6 @@ const Footer = () => {
                 />
               </div>
 
-              {/* Main image card */}
               <div className="relative w-full aspect-[4/3] rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden z-10 shadow-2xl">
                 <img
                   src={teamImg}
@@ -89,7 +87,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Middle links */}
           <div className="lg:col-span-3 lg:col-start-6 flex flex-col gap-5 lg:gap-6 z-10 relative">
             {["About Us", "Journal", "Faq", "Get In Touch", "Careers"].map(
               (link) => (
@@ -104,7 +101,6 @@ const Footer = () => {
             )}
           </div>
 
-          {/* Right content */}
           <div className="lg:col-span-4 flex flex-col gap-8 lg:gap-10 z-10 relative">
             <p className="text-xs lg:text-sm text-zinc-400 leading-relaxed max-w-sm">
               At <span className="text-zinc-200 font-medium">Floka</span>, we

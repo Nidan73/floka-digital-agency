@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ParallaxImage from "../components/Common/ParallaxImage"; // Ensure this path is correct
+import ParallaxImage from "../components/Common/ParallaxImage";
 import { motion } from "framer-motion";
 
 const PortfolioSection = () => {

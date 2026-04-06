@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { cn } from "../../lib/utils"; // Using the utility we created for clean classes
+import { cn } from "../../lib/utils";
 
 const ParallaxImage = ({
   src,

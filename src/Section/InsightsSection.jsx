@@ -84,7 +84,6 @@ const InsightsSection = () => {
   return (
     <section className="bg-[#f4f4f5] w-full py-16 lg:py-28">
       <div className="max-w-[95%] lg:max-w-[90%] mx-auto">
-        {/* Header */}
         <div className="text-center mb-12 lg:mb-20">
           <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 mb-4">
             INSIGHTS

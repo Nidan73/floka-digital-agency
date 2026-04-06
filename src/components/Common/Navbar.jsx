@@ -7,10 +7,9 @@ import "./Navbar.css";
 import SpinningBadge from "./SpinningBadge";
 import modal_bottom from "../../assets/modal_bottom.svg";
 const Navbar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // For Desktop dark modal
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // For Mobile white drawer
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Prevent scrolling on the background when ANY modal/drawer is open
   useEffect(() => {
     if (isModalOpen || isMobileMenuOpen) {
       document.body.style.overflow = "hidden";

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LiquidImage from "../components/Common/LiquidImage";
-// Use your actual image paths here
 import leftPortraitImage from "../assets/modal_image.jpg";
 import aiImage from "../assets/team-action.jpg";
 import home1 from "../assets/home1-bg-img6-480x308.jpg";

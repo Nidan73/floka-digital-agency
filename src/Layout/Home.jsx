@@ -16,12 +16,13 @@ import FaqSection from "../Section/FaqSection";
 import InsightsSection from "../Section/InsightsSection";
 import Footer from "../components/Common/Footer";
 import ParticleHero from "../components/Common/ParticleLogo";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   return (
     <div className="relative bg-white w-full">
       <CustomCursor />
-
+      <ScrollToTop />
       <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-zinc-100">
         <Navbar />
       </header>
@@ -36,7 +37,6 @@ const Home = () => {
         <section className="sticky z-10 w-full bg-white shadow-2xl rounded-t-[3rem]">
           <ExpertiseSection />
         </section>
-
         <section className="sticky z-60 w-full bg-white shadow-[0_-30px_60px_rgba(0,0,0,0.2)] rounded-t-[3rem]">
           <FunFactsSection />
           <ClientLogosSection />
