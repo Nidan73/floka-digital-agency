@@ -71,7 +71,7 @@ function ParticleLogo({ count = 18000 }) {
     const white = "#eefcff";
 
     const sRaw = sampleTextPoints({
-      text: "S",
+      text: "H",
       width: 560,
       height: 520,
       font: "900 340px Arial Black, Arial, sans-serif",
@@ -84,7 +84,7 @@ function ParticleLogo({ count = 18000 }) {
     });
 
     const mRaw = sampleTextPoints({
-      text: "M",
+      text: "I",
       width: 760,
       height: 520,
       font: "900 340px Arial Black, Arial, sans-serif",
@@ -97,7 +97,7 @@ function ParticleLogo({ count = 18000 }) {
     });
 
     const techRaw = sampleTextPoints({
-      text: "TECHNOLOGY",
+      text: "Nidan",
       width: 1200,
       height: 220,
       font: "600 96px Arial, sans-serif",
