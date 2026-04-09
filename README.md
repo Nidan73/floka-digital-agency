@@ -2,7 +2,7 @@
 
 A high-performance, visually immersive digital agency landing page. This project combines modern frontend architecture with premium motion design and 3D particle simulations to create a luxury digital experience.
 
-🔗 **Live Demo:** [sm-tech-task.netlify.app](https://sm-tech-task.netlify.app/)
+🔗 **Live Demo:** [https://floka-digitat-agent.netlify.app/]([https://sm-tech-task.netlify.app/](https://floka-digitat-agent.netlify.app/))
 
 🔗 **GitHub Repository:** [Nidan73/floka-digital-agency](https://github.com/Nidan73/floka-digital-agency)
 
