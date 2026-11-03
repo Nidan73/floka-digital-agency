@@ -1,162 +1,53 @@
-# 🌌 Floka Digital Agency
+# Floka Digital Agency
 
-A high-performance, visually immersive digital agency landing page. This project combines modern frontend architecture with premium motion design and 3D particle simulations to create a luxury digital experience.
+Live: https://floka-digitat-agent.netlify.app/
 
-🔗 **Live Demo:** ([https://floka-digital-agent.netify/](https://floka-digitat-agent.netlify.app/))
+A one-page landing site for a fictional creative agency, built with React and Vite. It closes with a React Three Fiber particle scene that forms text and reacts to the mouse.
 
-🔗 **GitHub Repository:** [Nidan73/floka-digital-agency](https://github.com/Nidan73/floka-digital-agency)
+## Features
 
----
+- Sections: hero, intro, portfolio, expertise, fun facts, client logos and reel, testimonials, contact, awards, team, FAQ, insights.
+- Particle scene (`src/components/Common/ParticleLogo.jsx`): 18,000 points whose targets are sampled from text drawn on a canvas, with spring return and mouse repulsion.
+- Custom cursor smoothed with Framer Motion springs.
+- Scroll-linked motion with `useScroll` and `useTransform`, parallax images, and an SVG turbulence hover effect on images.
+- Scroll-to-top button with a circular SVG progress ring.
+- Portfolio, expertise and awards content loaded from `public/data/*.json`.
+- The contact form is visual only and does not submit anywhere.
 
-## ✨ Key Features
+## Stack
 
-- **Premium UI/UX:** A minimalist dark aesthetic inspired by top-tier creative agencies.
-- **3D Particle Logo:** Custom interactive particle system built with **React Three Fiber** and **Three.js**.
-- **Typographic Preloader:** Smooth black-screen entry with a precise progress scan-line effect.
-- **Dynamic Scroll Interactions:** SVG-based circular progress tracker for scroll-to-top interaction.
-- **Modern Layouts:** Includes portfolio, expertise, awards, testimonials, contact, and blog-style insight sections.
-- **Smooth Animations:** Rich transitions and motion effects powered by **Framer Motion**.
-- **Fully Responsive:** Optimized for mobile, tablet, laptop, and large displays.
+React 19, Vite 7, React Router 7, Tailwind CSS 4, DaisyUI 5, Framer Motion 12, Three.js, React Three Fiber, drei, react-countup, react-fast-marquee.
 
----
-
-## 🛠️ Tech Stack
-
-### Core
-
-- **React 19**
-- **Vite**
-- **React Router**
-
-### Styling & Animation
-
-- **Tailwind CSS v4**
-- **DaisyUI**
-- **Framer Motion**
-
-### 3D & Creative Coding
-
-- **Three.js**
-- **React Three Fiber**
-- **@react-three/drei**
-- **Lucide React**
-- **React Icons**
-
-### Additional Libraries
-
-- **React CountUp**
-- **React Fast Marquee**
-- **clsx**
-- **tailwind-merge**
-
----
-
-## 📂 Project Structure
-
-```bash
-floka-digital-agency/
-├── public/                # Static assets and Netlify redirects
-├── src/
-│   ├── assets/            # Images, SVGs, and visual resources
-│   ├── components/
-│   │   └── Common/        # Reusable UI components
-│   ├── Layout/            # Layout wrappers
-│   ├── lib/               # Utility helpers
-│   ├── route/             # Routing configuration
-│   ├── Section/           # Page sections
-│   │   ├── AvengersSection.jsx
-│   │   ├── AwardsSection.jsx
-│   │   ├── ClientLogosSection.jsx
-│   │   ├── ContactSection.jsx
-│   │   ├── ExpertiseSection.jsx
-│   │   ├── FaqSection.jsx
-│   │   ├── FunFactsSection.jsx
-│   │   ├── Hero.jsx
-│   │   ├── InsightsSection.jsx
-│   │   ├── IntroSection.jsx
-│   │   ├── PortfolioSection.jsx
-│   │   └── UserFeedbackSection.jsx
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── package-lock.json
-├── README.md
-└── vite.config.js
-```
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
+## Run locally
 
 ```bash
 git clone https://github.com/Nidan73/floka-digital-agency.git
 cd floka-digital-agency
-```
-
-### 2. Install dependencies
-
-```bash
 npm install
-```
-
-### 3. Start the development server
-
-```bash
 npm run dev
 ```
 
-### 4. Build for production
+## Scripts
 
-```bash
-npm run build
+- `npm run dev`: Vite dev server
+- `npm run build`: production build
+- `npm run preview`: preview the build
+- `npm run lint`: ESLint
+
+## Project structure
+
+```
+public/data/          JSON content for portfolio, expertise, awards, team
+src/Layout/Home.jsx   page composition
+src/Section/          page sections
+src/components/       shared UI and motion components, particle scene
+src/route/            router
 ```
 
-### 5. Preview the production build
+## Deployment
 
-```bash
-npm run preview
-```
+Deployed on Netlify. The site has a single route, so no SPA redirect rule is needed.
 
----
+## Author
 
-## 📦 Scripts
-
-- `npm run dev` — Start the Vite development server
-- `npm run build` — Create the production build
-- `npm run preview` — Preview the production build locally
-- `npm run lint` — Run ESLint
-
----
-
-## 🌐 Deployment
-
-This project is deployed on **Netlify**.
-
-For SPA routing on Netlify, add a `_redirects` file inside the `public/` folder with the following rule:
-
-```txt
-/*    /index.html   200
-```
-
----
-
-## 👤 Author
-
-**Nidan Alam**
-
-- **Portfolio:** [nidanalam.netlify.app](https://nidanalam.netlify.app/)
-- **LinkedIn:** [linkedin.com/in/nidan-alam-7428a3231](https://www.linkedin.com/in/nidan-alam-7428a3231)
-- **GitHub:** [github.com/Nidan73](https://github.com/Nidan73)
-
----
-
-## 📄 License
-
-This project is for demonstration and portfolio purposes. All rights reserved.
+Nidan Alam: https://nidanalam.dev, https://github.com/Nidan73
